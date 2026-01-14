@@ -1,0 +1,24 @@
+{
+  "name": "nerdsbayollibot",
+  "version": "0.0.1",
+  "description": "olli",
+  "homepage": "https://github.com/k-one-o-two/nerdsbayollibot#readme",
+  "bugs": {
+    "url": "https://github.com/k-one-o-two/nerdsbayollibot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-one-o-two/nerdsbayollibot.git"
+  },
+  "license": "ISC",
+  "author": "k102",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "node-telegram-bot-api": "^0.67.0"
+  }
+}
