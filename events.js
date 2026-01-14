@@ -13,7 +13,7 @@ export const setupBotEvents = (bot) => {
       }
 
       await bot.sendMessage(original.chat.id, msg.text, {
-        reply_to_message_id: msg.message_id,
+        reply_to_message_id: original.message_id,
       });
     } else {
       // forward from user to admins
