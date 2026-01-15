@@ -16,6 +16,7 @@ export const setupBotEvents = (bot) => {
         reply_to_message_id: original.message_id,
       });
     } else {
+      console.info(settings.adminGroup, msg.chat.id, msg.message_id)
       // forward from user to admins
       bot.forwardMessage(settings.adminGroup, msg.chat.id, msg.message_id);
     }

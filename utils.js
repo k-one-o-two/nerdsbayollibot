@@ -19,4 +19,4 @@ const createBot = () => {
 
 const isInAdminGroup = (msg) => msg.chat.id.toString() === settings.adminGroup;
 
-export { createBot, isInAdminGroup };
+export const utils = { createBot, isInAdminGroup };
