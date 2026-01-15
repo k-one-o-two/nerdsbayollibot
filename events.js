@@ -12,11 +12,8 @@ export const setupBotEvents = (bot) => {
         return;
       }
 
-      await bot.sendMessage(original.chat.id, msg.text, {
-        reply_to_message_id: original.message_id,
-      });
+      await bot.sendMessage(msg.from.id, msg.text);
     } else {
-      console.info(settings.adminGroup, msg.chat.id, msg.message_id)
       // forward from user to admins
       bot.forwardMessage(settings.adminGroup, msg.chat.id, msg.message_id);
     }
