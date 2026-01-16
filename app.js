@@ -1,8 +1,8 @@
 import { setupBotEvents } from "./events.js";
 import { utils } from "./utils.js";
-// import { settings } from "./settings.js";
+import { init } from "./db.js";
 
-// import { getCollections, init } from "./db.js";
+await init();
 
 const bot = utils.createBot();
 setupBotEvents(bot);
