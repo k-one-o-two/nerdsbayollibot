@@ -7,10 +7,12 @@ export const setupBotEvents = (bot) => {
     if (!utils.isInAdminGroup(msg)) {
       return;
     }
+
+    const collections = await getCollections();
     const counters = await collections.counters.find({}).toArray();
     const message = counters
       .map((counter) => {
-        return `${counter.username} (${counter.first_name}): ${counter.count}`;
+        return `@${counter.username} (${counter.first_name}): ${counter.count} messages`;
       })
       .join("\n");
     await bot.sendMessage(settings.adminGroup, message);
